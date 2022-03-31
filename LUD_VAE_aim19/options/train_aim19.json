@@ -1,0 +1,65 @@
+{
+  "task": "AIM"    //  root/task/images-models-options
+  , "gpu_ids": [0]
+  , "n_channels": 3  // broadcast to "datasets", 1 for grayscale, 3 for color
+
+  , "path": {
+    "root": "translate"
+    , "pretrained_net": null      // path of pretrained model
+  }
+
+  , "datasets": {
+    "train": {
+      "name": "train_dataset"           // just name
+      , "dataroot": ["/home/dihan/dataset/AIM-RWSR/train-clean-images/4x/", "/home/dihan/dataset/AIM-RWSR/train-noisy-images/1x/"]
+      , "n_max": null
+      , "H_size": 64                    // patch size 40 | 64 | 96 | 128 | 192
+      , "dataloader_shuffle": false
+      , "dataloader_num_workers": 8
+      , "dataloader_batch_size": 16
+
+      , "H_noise_level": 15
+      , "L_noise_level": 10
+
+      , "normalize": {
+        "mean_noisy": [120.96351636, 115.84200238, 104.9237979]
+        , "std_noisy": [61.84091623, 59.79885696, 65.42669225]
+        , "mean_clean": [114.69150172, 111.67491841, 103.26490806]
+        , "std_clean": [70.6325031,  67.0257846, 72.95698077]
+      }
+
+    }
+    , "test": {
+      "name": "test_dataset"            // just name
+      , "dataroot": ["/home/dihan/dataset/AIM-RWSR/valid-gt-clean/4x/", "/home/dihan/dataset/AIM-RWSR/valid-input-noisy/1x/"]
+      , "H_size": 256
+      , "n_max": 20
+
+      , "H_noise_level": 15
+      , "L_noise_level": 10
+
+      , "normalize": {
+        "mean_noisy": [120.96351636, 115.84200238, 104.9237979]
+        , "std_noisy": [61.84091623, 59.79885696, 65.42669225]
+        , "mean_clean": [114.69150172, 111.67491841, 103.26490806]
+        , "std_clean": [70.6325031,  67.0257846, 72.95698077]
+      }
+    }
+  }
+
+  , "train": {
+    "optimizer_type": "adam"        // fixed, adam is enough
+    , "optimizer_lr": 1e-4            // learning rate
+    , "KL_anneal": "linear"
+    , "KL_anneal_maxiter": 1e8
+    , "KL_weight": 1e-4
+
+    , "scheduler_type": "MultiStepLR" // "MultiStepLR" is enough
+    , "scheduler_milestones": [100000]
+    , "scheduler_gamma": 0.5
+
+    , "checkpoint_test": 50000           // for testing
+    , "checkpoint_save": 50000           // for saving model
+    , "checkpoint_print": 1000           // for print
+  }
+}
