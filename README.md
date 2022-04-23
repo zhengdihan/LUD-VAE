@@ -27,3 +27,13 @@ python main_translate.py
 For real-world super-resolution, we use the ESRGAN model. The code can be found in https://github.com/jixiaozhong/RealSR.
 
 For image denoising task, we use the DnCNN model, which from https://github.com/cszn/KAIR.
+
+
+## Training LUD-VAE
+
+Change the `"dataroot"` in `*/options/train_*.json`, run:
+
+```
+cd ./LUD_VAE_aim19/
+python main_train.py
+```
