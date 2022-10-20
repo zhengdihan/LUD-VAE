@@ -36,6 +36,7 @@ For real-world super-resolution, we use the ESRGAN model. The code can be found 
 
 For image denoising task, we use the DnCNN model, which from https://github.com/cszn/KAIR.
 
+For low-light image enhancement task, we use the LLFlow model: https://github.com/wyf0912/LLFlow
 
 ## Training LUD-VAE
 
