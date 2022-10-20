@@ -1,5 +1,5 @@
 # LUD-VAE
-Official code for our paper "Learn from Unpaired Data for Image Restoration: A Variational Bayes Approach". https://arxiv.org/pdf/2204.10090.pdf
+Official code for our paper "Learn from Unpaired Data for Image Restoration: A Variational Bayes Approach". https://ieeexplore.ieee.org/document/9924527/
 
 ## Dataset Preparation
 For AIM19 and NTIRE20, the dataset preparation is the same with the DeFlow method. See https://github.com/volflow/DeFlow.
