@@ -5,6 +5,14 @@ Official code for our paper "Learn from Unpaired Data for Image Restoration: A V
 For AIM19 and NTIRE20, the dataset preparation is the same with the DeFlow method. See https://github.com/volflow/DeFlow.
 
 For SIDD, we use the SIDD-Small Dataset, which can be download from https://www.eecs.yorku.ca/~kamel/sidd/dataset.php.
+We crop the images in SIDD-Small dataset to 512x512x3 patches.
+
+For DND, the dataset can be find in https://www.bing.com/search?q=dnd+dataset&cvid=7faaa429db2e4c28a33a4fd35fffe0ec&aqs=edge.0.0l2.3624j0j1&pglt=43&FORM=ANNTA1&PC=EDGEDSE
+
+For LOL, we use the EnlGAN's unpaired dataset: https://drive.google.com/drive/folders/1fwqz8-RnTfxgIIkebFG2Ej3jQFsYECh0?usp=sharing
+and the test data from LOL dataset: https://daooshee.github.io/BMVC2018website/
+
+##
 
 ## Validate Pretrained Models
 
