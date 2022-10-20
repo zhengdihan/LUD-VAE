@@ -35,7 +35,15 @@ python main_translate.py
 For real-world super-resolution, we use the ESRGAN model. The code can be found in https://github.com/jixiaozhong/RealSR.
 
 For image denoising task, we use the DnCNN model, which from https://github.com/cszn/KAIR.
-We provide pre-trained models in ./LUD_VAE_dnd/DnCNN/model_zoo/dncnn.pth and ./LUD_VAE_sidd/DnCNN/model_zoo/dncnn.pth for DND and SIDD datasets.
+We provide pre-trained models in 
+```
+./LUD_VAE_dnd/DnCNN/model_zoo/dncnn.pth 
+```
+and 
+```
+./LUD_VAE_sidd/DnCNN/model_zoo/dncnn.pth 
+```
+for DND and SIDD datasets.
 
 For low-light image enhancement task, we use the LLFlow model: https://github.com/wyf0912/LLFlow
 
