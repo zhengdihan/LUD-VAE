@@ -47,6 +47,8 @@ for DND and SIDD datasets.
 
 For low-light image enhancement task, we use the LLFlow model: https://github.com/wyf0912/LLFlow
 
+All the pretrained models can be found in https://drive.google.com/drive/folders/1XKIt5WBPh0Fc3AFEcWxZphfs_N_5YnYw?usp=sharing
+
 ## Training LUD-VAE
 
 Change the `"dataroot"` in `*/options/train_*.json`, run:
